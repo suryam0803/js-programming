@@ -1,0 +1,44 @@
+<center>
+   <h1> todo-List</h1>
+
+
+
+<input id="box">
+<button onclick="create()">add</button>
+<ul id="two">
+    <li >hello  <button  onclick="del(event)">delete</button> </li>
+        
+   
+    
+</ul>
+
+</center>
+<script>
+var box=document.getElementById("box")
+var two=document.getElementById("two")
+
+ function create(){
+    var box1=box
+     var create=document.createElement("li")
+     create.innerHTML=(box1.value +" <button onclick='del(event)'>delete</button>")
+        two.append(create)
+ }
+
+
+
+function del(event){
+    
+ event.target.parentElement.remove()
+}
+
+
+</script>
+
+
+<style>
+    body{
+        background-color: violet;
+
+        
+    }
+</style>
